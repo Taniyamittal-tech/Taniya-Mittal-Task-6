@@ -20,3 +20,19 @@ order_total (or amount)
 status
 <br>
 Adjust field names based on your actual schema.
+<br>
+<br>
+2. QUERY TO ANALYZE MONTHLY REVENUE AND ORDER VOLUME
+<br>
+SELECT
+    DATE_FORMAT(order_date, '%Y-%m') AS month,
+    COUNT(order_id) AS total_orders,
+    SUM(order_total) AS total_revenue
+FROM
+    orders
+WHERE
+    status = 'Completed'  -- Optional: filter out cancelled/refunded orders
+GROUP BY
+    DATE_FORMAT(order_date, '%Y-%m')
+ORDER BY
+    month;

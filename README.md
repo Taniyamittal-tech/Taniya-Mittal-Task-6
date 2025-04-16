@@ -54,3 +54,12 @@ ORDER BY
     <br>
     <br>
     OUTPUT EXAMPLE IS ADDED AS IMAGE.
+    <br>
+    <br>
+    3. OPTIONAL ENHANCEMENTS
+    <br>
+Filter by year: Add YEAR(order_date) = 2024
+<br>
+Breakdown by product category, region, etc.
+<br>
+Use CTEs or JOINs if revenue comes from another table

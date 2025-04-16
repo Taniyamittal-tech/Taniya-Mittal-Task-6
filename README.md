@@ -25,14 +25,32 @@ Adjust field names based on your actual schema.
 2. QUERY TO ANALYZE MONTHLY REVENUE AND ORDER VOLUME
 <br>
 SELECT
-    DATE_FORMAT(order_date, '%Y-%m') AS month,
-    COUNT(order_id) AS total_orders,
-    SUM(order_total) AS total_revenue
-FROM
-    orders
-WHERE
-    status = 'Completed'  -- Optional: filter out cancelled/refunded orders
-GROUP BY
+<br>
     DATE_FORMAT(order_date, '%Y-%m')
+    <br>
+    AS month,
+    <br>
+    COUNT(order_id) AS total_orders,
+    <br>
+    SUM(order_total) AS total_revenue
+    <br>
+FROM
+<br>
+    orders
+    <br>
+WHERE
+<br>
+    status = 'Completed'  -- 
+    <br>
+    Optional: filter out cancelled/refunded orders
+    <br>
+GROUP BY
+<br>
+    DATE_FORMAT(order_date, '%Y-%m')
+    <br>
 ORDER BY
+<br>
     month;
+    <br>
+    <br>
+    OUTPUT EXAMPLE IS ADDED AS IMAGE.
